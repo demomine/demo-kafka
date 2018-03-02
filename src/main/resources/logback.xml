@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<contextName>kafka-demo</contextName>
+	<!-- 控制台输出 -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- 日志输出编码 -->
+		<Encoding>UTF-8</Encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>  [%date] [%thread] [%-1level] -%mdc{client} %c{1} %line %msg %n</Pattern>
+		</layout>
+	</appender>
+
+
+	<!-- 日志输出级别 -->
+	<root level="debug">
+		<appender-ref ref="console" />
+	</root>
+</configuration>
